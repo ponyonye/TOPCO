@@ -1,0 +1,902 @@
+[
+    {
+        "id": 1,
+        "name": "Acer Aspire 3",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 8000000,
+        "recommended_for": ["ekonomi", "akuntansi", "hukum", "sastra"]
+    },
+    {
+        "id": 2,
+        "name": "Asus Zenbook 14 OLED",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 12800000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 3,
+        "name": "Apple MacBook Air 13 (M4)",
+        "brand": "Apple",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 16000000,
+        "recommended_for": ["desain", "multimedia", "film", "informatika"]
+    },
+    {
+        "id": 4,
+        "name": "Lenovo IdeaPad Slim 3",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 7200000,
+        "recommended_for": ["ekonomi", "akuntansi", "sastra"]
+    },
+    {
+        "id": 5,
+        "name": "Acer Swift Go 14",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 11200000,
+        "recommended_for": ["informatika", "manajemen", "bisnis"]
+    },
+    {
+        "id": 6,
+        "name": "Dell XPS 16",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 28800000,
+        "recommended_for": ["teknik", "informatika", "game development"]
+    },
+    {
+        "id": 7,
+        "name": "Lenovo ThinkPad X1 Carbon Gen 12",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 24000000,
+        "recommended_for": ["informatika", "bisnis", "teknik"]
+    },
+    {
+        "id": 8,
+        "name": "HP Chromebook Plus x360",
+        "brand": "HP",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 6400000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    },
+    {
+        "id": 9,
+        "name": "Asus ROG Zephyrus G14",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 20800000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 10,
+        "name": "Microsoft Surface Laptop 7th Edition",
+        "brand": "Microsoft",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["desain", "multimedia", "bisnis"]
+    },
+    {
+        "id": 11,
+        "name": "Acer Nitro V 15",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 12,
+        "name": "HP Spectre x360 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 22400000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 13,
+        "name": "Lenovo Yoga Pro 9i",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 19200000,
+        "recommended_for": ["teknik", "desain", "informatika"]
+    },
+    {
+        "id": 14,
+        "name": "Samsung Galaxy Book 4 Ultra",
+        "brand": "Samsung",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["teknik", "informatika", "desain"]
+    },
+    {
+        "id": 15,
+        "name": "Apple MacBook Pro 14 (M4)",
+        "brand": "Apple",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 27200000,
+        "recommended_for": ["desain", "multimedia", "film", "informatika"]
+    },
+    {
+        "id": 16,
+        "name": "MSI Katana A15 AI",
+        "brand": "MSI",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 16000000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 17,
+        "name": "Dell Inspiron 14 Plus",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["ekonomi", "manajemen", "hukum"]
+    },
+    {
+        "id": 18,
+        "name": "Asus Vivobook 15",
+        "brand": "Asus",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 8800000,
+        "recommended_for": ["sastra", "akuntansi", "pendidikan"]
+    },
+    {
+        "id": 19,
+        "name": "HP Pavilion 15",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 11200000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 20,
+        "name": "Lenovo Legion 5 Pro",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 17600000,
+        "recommended_for": ["game development", "teknik", "informatika"]
+    },
+    {
+        "id": 21,
+        "name": "Acer Predator Helios Neo 16",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 20800000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 22,
+        "name": "Asus TUF Gaming A15",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 23,
+        "name": "Dell Latitude 5540",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 12800000,
+        "recommended_for": ["bisnis", "manajemen", "akuntansi"]
+    },
+    {
+        "id": 24,
+        "name": "HP Envy x360 15",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 16000000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 25,
+        "name": "Lenovo IdeaPad 5 2-in-1",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 8800000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    },
+    {
+        "id": 26,
+        "name": "Microsoft Surface Pro 11",
+        "brand": "Microsoft",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 20800000,
+        "recommended_for": ["desain", "bisnis", "multimedia"]
+    },
+    {
+        "id": 27,
+        "name": "Acer Chromebook Spin 714",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 7200000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    },
+    {
+        "id": 28,
+        "name": "Asus ExpertBook B5",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 29,
+        "name": "Dell G16 Gaming",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 19200000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 30,
+        "name": "HP Omen 16",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 20800000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 31,
+        "name": "Lenovo ThinkBook 16 Gen 6",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 10400000,
+        "recommended_for": ["ekonomi", "akuntansi", "manajemen"]
+    },
+    {
+        "id": 32,
+        "name": "Acer TravelMate P6",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 13600000,
+        "recommended_for": ["bisnis", "informatika"]
+    },
+    {
+        "id": 33,
+        "name": "Asus ProArt P16",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 34,
+        "name": "Dell Precision 5480",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 27200000,
+        "recommended_for": ["teknik", "informatika", "game development"]
+    },
+    {
+        "id": 35,
+        "name": "HP ZBook Firefly 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["teknik", "informatika"]
+    },
+    {
+        "id": 36,
+        "name": "Lenovo ThinkPad P1 Gen 7",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["teknik", "informatika", "game development"]
+    },
+    {
+        "id": 37,
+        "name": "Acer ConceptD 3 Ezel",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 17600000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 38,
+        "name": "Asus Zenbook Pro 14 OLED",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 22400000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 39,
+        "name": "Dell XPS 13 Plus",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 20800000,
+        "recommended_for": ["informatika", "bisnis", "manajemen"]
+    },
+    {
+        "id": 40,
+        "name": "HP EliteBook 840 G11",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 17600000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 41,
+        "name": "Lenovo IdeaPad Gaming 3",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 13600000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 42,
+        "name": "Acer Swift X 14",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 43,
+        "name": "Asus ROG Strix G16",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 22400000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 44,
+        "name": "Dell Alienware m16 R2",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 45,
+        "name": "HP Victus 15",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 46,
+        "name": "Lenovo LOQ 15",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 12800000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 47,
+        "name": "Acer Aspire 5",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 8800000,
+        "recommended_for": ["ekonomi", "akuntansi", "hukum"]
+    },
+    {
+        "id": 48,
+        "name": "Asus Vivobook 14 Flip",
+        "brand": "Asus",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 9600000,
+        "recommended_for": ["sastra", "pendidikan", "hukum"]
+    },
+    {
+        "id": 49,
+        "name": "Dell Inspiron 16",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 14400000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 50,
+        "name": "HP Pavilion Plus 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 12800000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 51,
+        "name": "Lenovo Yoga 7 2-in-1",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["desain", "multimedia"]
+    },
+    {
+        "id": 52,
+        "name": "Acer Nitro 16",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 17600000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 53,
+        "name": "Asus Zenbook S 14",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["desain", "multimedia", "bisnis"]
+    },
+    {
+        "id": 54,
+        "name": "Dell XPS 14",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["teknik", "informatika", "desain"]
+    },
+    {
+        "id": 55,
+        "name": "HP OmniBook Ultra 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 17600000,
+        "recommended_for": ["teknik", "informatika"]
+    },
+    {
+        "id": 56,
+        "name": "Lenovo ThinkPad E16 Gen 2",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 10400000,
+        "recommended_for": ["ekonomi", "manajemen", "akuntansi"]
+    },
+    {
+        "id": 57,
+        "name": "Acer Swift Edge 16",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 16000000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 58,
+        "name": "Asus ROG Zephyrus G16",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 24000000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 59,
+        "name": "Dell Latitude 7450",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 17600000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 60,
+        "name": "HP Envy 16",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 19200000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 61,
+        "name": "Lenovo IdeaPad Pro 5i",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["informatika", "teknik"]
+    },
+    {
+        "id": 62,
+        "name": "Acer Aspire Vero",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 8800000,
+        "recommended_for": ["ekonomi", "akuntansi", "sastra"]
+    },
+    {
+        "id": 63,
+        "name": "Asus Vivobook S 15",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 64,
+        "name": "Dell Inspiron 15",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["ekonomi", "manajemen", "hukum"]
+    },
+    {
+        "id": 65,
+        "name": "HP Pavilion Aero 13",
+        "brand": "HP",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 8800000,
+        "recommended_for": ["sastra", "pendidikan", "hukum"]
+    },
+    {
+        "id": 66,
+        "name": "Lenovo Legion Pro 7i",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 67,
+        "name": "Acer Predator Triton 14",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 68,
+        "name": "Asus Zenbook 15 OLED",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 20800000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 69,
+        "name": "Dell XPS 15",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 27200000,
+        "recommended_for": ["teknik", "informatika", "desain"]
+    },
+    {
+        "id": 70,
+        "name": "HP Spectre 16",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 24000000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 71,
+        "name": "Lenovo ThinkPad Z16",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["teknik", "informatika", "bisnis"]
+    },
+    {
+        "id": 72,
+        "name": "Acer Swift 3",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["ekonomi", "akuntansi", "hukum"]
+    },
+    {
+        "id": 73,
+        "name": "Asus Vivobook Pro 16X",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 22400000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 74,
+        "name": "Dell Latitude 9440",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 20800000,
+        "recommended_for": ["bisnis", "manajemen", "informatika"]
+    },
+    {
+        "id": 75,
+        "name": "HP EliteBook Ultra G1",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["bisnis", "informatika"]
+    },
+    {
+        "id": 76,
+        "name": "Lenovo Yoga Slim 7i",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 16000000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 77,
+        "name": "Acer Aspire 7",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 12800000,
+        "recommended_for": ["informatika", "game development"]
+    },
+    {
+        "id": 78,
+        "name": "Asus ROG Flow X13",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 79,
+        "name": "Dell Inspiron 14 2-in-1",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 10400000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    },
+    {
+        "id": 80,
+        "name": "HP Pavilion 14",
+        "brand": "HP",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 8800000,
+        "recommended_for": ["ekonomi", "akuntansi", "sastra"]
+    },
+    {
+        "id": 81,
+        "name": "Lenovo IdeaPad Flex 5",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    },
+    {
+        "id": 82,
+        "name": "Acer Nitro 5",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 83,
+        "name": "Asus Zenbook Duo",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["desain", "multimedia", "film"]
+    },
+    {
+        "id": 84,
+        "name": "Dell XPS 17",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 28800000,
+        "recommended_for": ["teknik", "informatika", "desain"]
+    },
+    {
+        "id": 85,
+        "name": "HP Omen Transcend 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 19200000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 86,
+        "name": "Lenovo ThinkPad X1 Yoga Gen 8",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 22400000,
+        "recommended_for": ["bisnis", "informatika"]
+    },
+    {
+        "id": 87,
+        "name": "Acer Swift Go 16",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 16000000,
+        "recommended_for": ["desain", "informatika"]
+    },
+    {
+        "id": 88,
+        "name": "Asus Vivobook 16",
+        "brand": "Asus",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["ekonomi", "akuntansi", "hukum"]
+    },
+    {
+        "id": 89,
+        "name": "Dell Latitude 5340",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 11200000,
+        "recommended_for": ["bisnis", "manajemen"]
+    },
+    {
+        "id": 90,
+        "name": "HP Envy x360 14",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "price": 14400000,
+        "recommended_for": ["desain", "multimedia"]
+    },
+    {
+        "id": 91,
+        "name": "Lenovo IdeaPad Slim 5",
+        "brand": "Lenovo",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["ekonomi", "akuntansi", "sastra"]
+    },
+    {
+        "id": 92,
+        "name": "Acer Predator Helios 18",
+        "brand": "Acer",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 25600000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 93,
+        "name": "Asus ROG Zephyrus M16",
+        "brand": "Asus",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 27200000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 94,
+        "name": "Dell Alienware x16",
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 28800000,
+        "recommended_for": ["game development", "informatika"]
+    },
+    {
+        "id": 95,
+        "name": "HP ZBook Studio G10",
+        "brand": "HP",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 27200000,
+        "recommended_for": ["teknik", "informatika", "game development"]
+    },
+    {
+        "id": 96,
+        "name": "Lenovo Legion 7i",
+        "brand": "Lenovo",
+        "ram": "16GB",
+        "storage": "1TB SSD",
+        "price": 24000000,
+        "recommended_for": ["game development", "informatika", "teknik"]
+    },
+    {
+        "id": 97,
+        "name": "Acer Swift 5",
+        "brand": "Acer",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 11200000,
+        "recommended_for": ["ekonomi", "manajemen", "hukum"]
+    },
+    {
+        "id": 98,
+        "name": "Asus Vivobook 14",
+        "brand": "Asus",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 8800000,
+        "recommended_for": ["sastra", "pendidikan", "hukum"]
+    },
+    {
+        "id": 99,
+        "name": "Dell Inspiron 13",
+        "brand": "Dell",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "price": 10400000,
+        "recommended_for": ["ekonomi", "akuntansi", "sastra"]
+    },
+    {
+        "id": 100,
+        "name": "HP Pavilion x360 14",
+        "brand": "HP",
+        "ram": "8GB",
+        "storage": "512GB SSD",
+        "price": 9600000,
+        "recommended_for": ["sastra", "hukum", "pendidikan"]
+    }
+]

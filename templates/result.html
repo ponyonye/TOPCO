@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Hasil Rekomendasi</h2>
+
+{% if laptops %}
+<form method="POST" action="{{ url_for('compare') }}">
+    <div class="row">
+        {% for laptop in laptops %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ laptop.name }}</h5>
+                    <p>{{ laptop.brand }} | RAM: {{ laptop.ram }} | Storage: {{ laptop.storage }}</p>
+                    <p><strong>Rp{{ "{:,.0f}".format(laptop.price) }}</strong></p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="compare" value="{{ laptop.id }}">
+                        <label class="form-check-label">Bandingkan</label>
+                    </div>
+                    <!-- Wishlist Button -->
+                    <button class="btn btn-warning add-to-wishlist" data-id="{{ laptop.id }}">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button type="submit" class="btn btn-warning">Bandingkan yang Dipilih</button>
+</form>
+
+
+{% else %}
+    <p>Waduh kami mohon maaf belum ada yang sesuai nih sama kriteria kamu </p>
+{% endif %}
+{% endblock %}

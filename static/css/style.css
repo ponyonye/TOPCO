@@ -1,0 +1,280 @@
+/* Custom Properties for Colors */
+:root {
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #f8f9fa;
+    --text-color: #24292f;
+    --text-muted-color: #57606a;
+    --card-bg-color: #fff;
+    --card-border-color: #ddd;
+    --card-hover-bg-color: #f1f1f1;
+    
+    --dark-primary-bg-color: #181818;
+    --dark-secondary-bg-color: #212121;
+    --dark-text-color: #eaeaea;
+    --dark-text-muted-color: #a6a6a6;
+    --dark-card-bg-color: #333333;
+    --dark-card-border-color: #444444;
+    --dark-card-hover-bg-color: #444444;
+    --dark-btn-primary-bg-color: #007bff;
+    --dark-btn-warning-bg-color: #ffc107;
+}
+
+/* Hero Section: Menempatkan form di tengah layar */
+.hero {
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.hero .form-label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.hero .form-control {
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.hero .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* Rekomendasi Laptop */
+.rekomendasi-laptop {
+    background-color: var(--primary-bg-color);
+    padding: 1px 0;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-right 60s linear infinite;
+    will-change: transform;
+}
+
+.edukasi-laptop article {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edukasi-laptop h3 {
+    color: var(--text-color);
+}
+
+.edukasi-laptop p,
+.edukasi-laptop ul {
+    color: var(--text-muted-color);
+    font-size: 16px;
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Laptop Cards */
+.laptop-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 250px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: var(--card-bg-color);
+    overflow: hidden;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-bg-color);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-muted-color);
+}
+
+button.add-to-wishlist {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.add-to-wishlist:hover {
+    background-color: #e0a800;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--dark-primary-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--dark-secondary-bg-color);
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .navbar .navbar-brand {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .container {
+    background-color: var(--dark-secondary-bg-color);
+}
+
+body.dark-mode .hero {
+    background-color: var(--dark-secondary-bg-color);
+}
+
+body.dark-mode .card {
+    background-color: var(--dark-card-bg-color);
+    color: var(--dark-text-color);
+    border-color: var(--dark-card-border-color);
+}
+
+body.dark-mode .card:hover {
+    background-color: var(--dark-card-hover-bg-color);
+}
+
+body.dark-mode .btn-primary {
+    background-color: var(--dark-btn-primary-bg-color);
+    border-color: var(--dark-btn-primary-bg-color);
+}
+
+body.dark-mode .btn-warning {
+    background-color: var(--dark-btn-warning-bg-color);
+    border-color: var(--dark-btn-warning-bg-color);
+}
+
+/* Scroll section styling for dark mode */
+body.dark-mode .scroll-container {
+    background-color: var(--dark-card-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Adjust text color and background color for other sections */
+body.dark-mode .edukasi-laptop article {
+    background-color: var(--dark-card-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .edukasi-laptop h3 {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .edukasi-laptop p,
+body.dark-mode .edukasi-laptop ul {
+    color: var(--dark-text-muted-color);
+}
+
+/* Keep font color consistent and readable */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--dark-text-color) !important;
+}
+
+body.dark-mode p, body.dark-mode li, body.dark-mode span, body.dark-mode .form-label {
+    color: var(--dark-text-muted-color) !important;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Dark Mode Adjustments for Table */
+body.dark-mode .table {
+    background-color: var(--dark-card-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .table-bordered {
+    border-color: var(--dark-card-border-color);
+}
+
+body.dark-mode .table th, 
+body.dark-mode .table td {
+    border: 1px solid var(--dark-card-border-color);
+    padding: 10px;
+    text-align: center;
+}
+
+body.dark-mode .table th {
+    background-color: var(--dark-secondary-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .table tbody tr:nth-child(even) {
+    background-color: var(--dark-card-bg-color);
+}
+
+body.dark-mode .table tbody tr:nth-child(odd) {
+    background-color: var(--dark-card-hover-bg-color);
+}
+
+body.dark-mode .table td {
+    color: var(--dark-text-muted-color);
+}
+

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2 class="text-center">Perbandingan Laptop Kamu</h2>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Brand</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for laptop in laptops %}
+            <tr>
+                <td>{{ laptop.name }}</td>
+                <td>{{ laptop.brand }}</td>
+                <td>{{ laptop.ram }}</td>
+                <td>{{ laptop.storage }}</td>
+                <td>Rp{{ "{:,.0f}".format(laptop.price) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

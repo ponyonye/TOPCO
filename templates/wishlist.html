@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Wishlist Punya Kamu</h2>
+
+<div id="wishlist-items" class="row">
+    <p>Loading your wishlist...</p>
+</div>
+
+<script>
+    // Pass the laptop data from Flask to JavaScript and rename the variable to avoid conflict
+    const flaskLaptops = {{ laptops | tojson }};
+    
+    // Function to load the wishlist from localStorage
+    function loadWishlist() {
+        return JSON.parse(localStorage.getItem('wishlist')) || [];
+    }
+
+    // Function to display the wishlist on the page
+    function displayWishlist() {
+        const wishlist = loadWishlist();
+        const wishlistContainer = document.getElementById('wishlist-items');
+
+        if (wishlist.length === 0) {
+            wishlistContainer.innerHTML = '<p>Your wishlist is empty.</p>';
+        } else {
+            wishlistContainer.innerHTML = '';  // Clear loading message
+
+            // Loop through the wishlist and display each item
+            wishlist.forEach(laptopId => {
+                const laptop = flaskLaptops.find(l => l.id === laptopId);  // Use flaskLaptops to find the laptop
+                if (laptop) {
+                    const itemHTML = `
+                        <div class="col-md-4 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">${laptop.name}</h5>
+                                    <p>${laptop.brand} | RAM: ${laptop.ram} | Storage: ${laptop.storage}</p>
+                                    <p><strong>Rp${laptop.price.toLocaleString()}</strong></p>
+                                    <button class="btn btn-danger remove-from-wishlist" data-id="${laptop.id}">
+                                        Remove from Wishlist
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    wishlistContainer.innerHTML += itemHTML;
+                }
+            });
+
+            // Add event listener for removing items
+            document.querySelectorAll('.remove-from-wishlist').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const laptopId = e.target.getAttribute('data-id');
+                    removeFromWishlist(laptopId);
+                    displayWishlist();  // Re-display the wishlist after removing an item
+                });
+            });
+        }
+    }
+
+    // Function to remove an item from the wishlist
+    function removeFromWishlist(laptopId) {
+        let wishlist = loadWishlist();
+        wishlist = wishlist.filter(id => id !== parseInt(laptopId));
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+
+    // Call the function to display the wishlist once the page is ready
+    document.addEventListener('DOMContentLoaded', displayWishlist);
+</script>
+
+{% endblock %}

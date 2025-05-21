@@ -1,0 +1,208 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="container text-center">
+        <h1 class="display-4">Cari Laptop Terbaik Sesuai Kebutuhanmu</h1>
+        <form method="POST" action="{{ url_for('search') }}" class="row justify-content-center mt-4">
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="jurusan" class="form-label">Jurusan</label>
+                <input type="text" name="jurusan" id="jurusan" class="form-control" placeholder="Masukkan jurusan" required>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <label for="budget" class="form-label">Budget (Rp)</label>
+                <input type="number" name="budget" id="budget" class="form-control" placeholder="Masukkan budget" required>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg">Cari Rekomendasi</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Rekomendasi Laptop -->
+<section class="rekomendasi-laptop mt-5 text-center">
+    <div class="container">
+        <h2 class="mb-3">Laptop Yang Bisa Kamu Pilih</h2>
+        <div class="scroll-container">
+            <div class="scroll-track" id="scroll-track">
+                {% for laptop in laptops %}
+                <div class="laptop-card card mx-2" style="min-width: 250px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ laptop.name }}</h5>
+                        <p>{{ laptop.brand }} | RAM: {{ laptop.ram }} | Storage: {{ laptop.storage }}</p>
+                        <p><strong>Rp{{ "{:,.0f}".format(laptop.price) }}</strong></p>
+                        
+                        <button class="btn btn-warning add-to-wishlist" data-id="{{ laptop.id }}">
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+                {% endfor %}
+                {# Duplicate once for infinite scroll illusion #}
+                {% for laptop in laptops %}
+                <div class="laptop-card card mx-2" style="min-width: 250px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ laptop.name }}</h5>
+                        <p>{{ laptop.brand }} | RAM: {{ laptop.ram }} | Storage: {{ laptop.storage }}</p>
+                        {% if laptop.price %}
+                            <p><strong>Rp{{ "{:,.0f}".format(laptop.price) }}</strong></p>
+                        {% else %}
+                            <p><strong>Harga tidak tersedia</strong></p>
+                        {% endif %}
+                        <button class="btn btn-warning add-to-wishlist" data-id="{{ laptop.id }}">Add to Wishlist</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="edukasi-laptop py-5 border-top">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">Beberapa Hal Tentang Laptop Yang Perlu Kamu Tahu</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- RAM -->
+                <article id="ram" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Apa itu RAM?</h3>
+                    <p class="text-muted">RAM (Random Access Memory) adalah memori sementara yang digunakan laptop untuk menjalankan aplikasi dan tugas secara bersamaan. Kapasitas RAM yang lebih besar memungkinkan laptop menangani lebih banyak aplikasi tanpa lag, sangat penting untuk multitasking atau aplikasi berat seperti pengeditan video.</p>
+                    <ul>
+                        <li><strong>8GB RAM:</strong> Cocok untuk tugas ringan seperti browsing, Microsoft Office, Zoom, dan kuliah online. Ideal untuk jurusan seperti ekonomi, hukum, atau sastra.</li>
+                        <li><strong>16GB RAM:</strong> Direkomendasikan untuk jurusan informatika, desain grafis, atau multimedia. Mendukung aplikasi seperti Adobe Photoshop, Visual Studio Code, atau editing video ringan.</li>
+                        <li><strong>32GB RAM atau lebih:</strong> Untuk profesional atau mahasiswa teknik/game development yang menggunakan software berat seperti Autodesk AutoCAD, Unreal Engine, atau rendering video 4K.</li>
+                        <li><strong>Tips:</strong> Pastikan RAM dapat diupgrade jika kebutuhan meningkat, terutama pada laptop dengan slot RAM tambahan.</li>
+                    </ul>
+                </article>
+
+                <!-- Storage -->
+                <article id="storage" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Penyimpanan (Storage)</h3>
+                    <p class="text-muted">Storage adalah tempat menyimpan sistem operasi, aplikasi, dan file pribadi seperti dokumen, foto, atau video. Ada dua jenis utama: HDD (Hard Disk Drive) dan SSD (Solid State Drive). SSD lebih disarankan karena performa dan ketahanannya.</p>
+                    <ul>
+                        <li><strong>HDD:</strong> Lebih murah, kapasitas besar (1TB+), tetapi lambat dan rentan terhadap guncangan. Cocok untuk menyimpan file besar jika kecepatan bukan prioritas.</li>
+                        <li><strong>SSD:</strong> Hingga 10x lebih cepat dari HDD, hemat daya, dan tahan guncangan. Wajib untuk booting cepat dan aplikasi modern.</li>
+                        <li><strong>256GB SSD:</strong> Cukup untuk kebutuhan dasar (dokumen, beberapa aplikasi). Ideal untuk jurusan seperti akuntansi atau pendidikan.</li>
+                        <li><strong>512GB SSD:</strong> Direkomendasikan untuk mahasiswa desain atau informatika yang menyimpan file proyek besar, seperti video atau dataset.</li>
+                        <li><strong>1TB SSD:</strong> Untuk profesional multimedia atau game development yang membutuhkan ruang besar untuk file proyek, game, atau video 4K.</li>
+                        <li><strong>Tips:</strong> Kombinasi SSD (untuk OS dan aplikasi) + HDD (untuk penyimpanan tambahan) bisa jadi solusi hemat biaya. Periksa juga dukungan NVMe SSD untuk kecepatan lebih tinggi.</li>
+                    </ul>
+                </article>
+
+                <!-- Layar -->
+                <article id="layar" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Layar & Resolusi</h3>
+                    <p class="text-muted">Layar memengaruhi kenyamanan visual, terutama untuk penggunaan jangka panjang seperti kuliah atau editing. Ukuran, resolusi, dan jenis panel menentukan kualitas tampilan.</p>
+                    <ul>
+                        <li><strong>13–14 inci:</strong> Ringkas, ringan (1–1.5 kg), mudah dibawa ke kampus. Cocok untuk mahasiswa hukum, sastra, atau ekonomi.</li>
+                        <li><strong>15.6 inci:</strong> Ideal untuk multitasking atau kerja stasioner, seperti desain atau pemrograman, tapi lebih berat (1.8–2.5 kg).</li>
+                        <li><strong>17 inci:</strong> Untuk profesional multimedia atau game development, tetapi kurang portabel.</li>
+                        <li><strong>Resolusi Full HD (1920x1080):</strong> Standar minimum untuk tampilan tajam. Cocok untuk kebanyakan tugas.</li>
+                        <li><strong>2K (2560x1440) atau 4K:</strong> Direkomendasikan untuk desain grafis atau editing video agar detail lebih jelas.</li>
+                        <li><strong>Panel IPS:</strong> Warna akurat, sudut pandang lebar. Wajib untuk jurusan desain/multimedia.</li>
+                        <li><strong>Panel OLED:</strong> Kontras dan warna lebih hidup, ideal untuk editing foto/video, tapi lebih mahal.</li>
+                        <li><strong>Tips:</strong> Pilih layar dengan kecerahan minimal 300 nits untuk penggunaan di luar ruangan. Pertimbangkan touchscreen untuk jurusan seni atau desain.</li>
+                    </ul>
+                </article>
+
+                <!-- Prosesor -->
+                <article id="prosesor" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Prosesor</h3>
+                    <p class="text-muted">Prosesor (CPU) adalah otak laptop, menentukan kecepatan pemrosesan tugas. Pilih berdasarkan kebutuhan jurusan dan intensitas tugas. Berikut panduan untuk CPU 2025:</p>
+                    <ul>
+                        <li><strong>Intel Core Ultra 3 / AMD Ryzen 3 / Qualcomm Snapdragon X Plus:</strong> Untuk tugas ringan seperti browsing, Microsoft Office, dan streaming. Cocok untuk jurusan ekonomi, sastra, atau hukum.</li>
+                        <li><strong>Intel Core Ultra 5 / AMD Ryzen 5 / Apple M4:</strong> Seimbang untuk multitasking, pemrograman ringan, dan editing foto. Ideal untuk informatika, manajemen, atau desain pemula.</li>
+                        <li><strong>Intel Core Ultra 7–9 / AMD Ryzen 7–9 / Apple M4 Pro:</strong> Untuk tugas berat seperti pengeditan video 4K, pemrograman kompleks, atau simulasi teknik. Cocok untuk teknik, game development, multimedia.</li>
+                        <li><strong>GPU (Kartu Grafis):</strong> GPU terintegrasi (Intel Iris Xe, AMD Radeon) cukup untuk tugas ringan. GPU diskrit (Nvidia RTX 4050/4060) diperlukan untuk desain 3D, game development, atau rendering.</li>
+                        <li><strong>Tips:</strong> Perhatikan generasi CPU (misalnya, Intel Core Ultra Series 2 atau AMD Ryzen AI 300). CPU terbaru lebih efisien dan mendukung AI (contoh: fitur Copilot+). Cek kebutuhan software jurusanmu, misalnya AutoCAD butuh CPU/GPU kuat.</li>
+                    </ul>
+                </article>
+
+                <!-- Baterai -->
+                <article id="baterai" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Daya Tahan Baterai</h3>
+                    <p class="text-muted">Daya tahan baterai penting untuk mahasiswa yang sering berpindah tempat, seperti ke kampus atau perpustakaan. Baterai yang baik memastikan laptop tetap hidup selama aktivitas seharian.</p>
+                    <ul>
+                        <li><strong>6–8 jam:</strong> Minimum untuk penggunaan sehari-hari (browsing, kuliah online, Office). Cocok untuk jurusan ringan.</li>
+                        <li><strong>10–12 jam:</strong> Ideal untuk mahasiswa informatika atau desain yang bekerja lama tanpa akses charger.</li>
+                        <li><strong>Fast Charging:</strong> Mengisi 50% baterai dalam 30–45 menit. Penting untuk jadwal padat (contoh: laptop dengan USB-C Power Delivery).</li>
+                        <li><strong>Tips:</strong> CPU hemat daya (Intel Core Ultra, AMD Ryzen AI, Apple M4) dan layar OLED hemat energi memperpanjang usia baterai. Matikan Wi-Fi/Bluetooth saat tidak digunakan untuk menghemat daya.</li>
+                    </ul>
+                </article>
+
+                <!-- Port & Konektivitas -->
+                <article id="port" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Port & Konektivitas</h3>
+                    <p class="text-muted">Port dan konektivitas memungkinkan laptop terhubung dengan perangkat eksternal seperti monitor, flashdisk, atau headset. Pastikan laptop memiliki port yang sesuai kebutuhanmu.</p>
+                    <ul>
+                        <li><strong>USB-A:</strong> Untuk perangkat lama seperti flashdisk, mouse, atau keyboard eksternal. Masih umum di banyak laptop.</li>
+                        <li><strong>USB-C:</strong> Port modern untuk transfer data cepat, pengisian daya, dan koneksi ke monitor. Pilih laptop dengan USB-C Thunderbolt 4 untuk kecepatan maksimal.</li>
+                        <li><strong>HDMI:</strong> Untuk menyambungkan laptop ke proyektor atau monitor eksternal, penting untuk presentasi di kelas.</li>
+                        <li><strong>Audio Jack 3.5mm:</strong> Untuk headset atau speaker, esensial untuk kuliah online atau editing audio.</li>
+                        <li><strong>Wi-Fi 6E / Wi-Fi 7:</strong> Koneksi internet lebih cepat dan stabil, ideal untuk streaming atau upload file besar.</li>
+                        <li><strong>Bluetooth 5.2/5.3:</strong> Untuk menghubungkan mouse, keyboard, atau earbuds nirkabel dengan latensi rendah.</li>
+                        <li><strong>Tips:</strong> Jika port terbatas, gunakan USB-C hub/dongle untuk menambah konektivitas. Periksa kompatibilitas port dengan perangkat jurusanmu, misalnya desain mungkin perlu SD card reader.</li>
+                    </ul>
+                </article>
+
+                <!-- GPU -->
+                <article id="gpu" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Kartu Grafis (GPU)</h3>
+                    <p class="text-muted">GPU (Graphics Processing Unit) ngurusin urusan visual, dari nampilin gambar di layar sampe ngejalanin game atau software desain. Penting banget buat kalian yang jurusan desain atau game dev!</p>
+                    <ul>
+                        <li><strong>GPU Terintegrasi (Intel Iris Xe, AMD Radeon, Apple Neural Engine):</strong> Cukup buat tugas ringan kayak Microsoft Office, streaming, atau coding dasar. Cocok buat jurusan ekonomi, hukum, atau sastra.</li>
+                        <li><strong>GPU Diskrit (Nvidia RTX 4050/4060, AMD RX 7600):</strong> Wajib buat desain 3D, editing video 4K, atau game development. Misalnya, Adobe Premiere, Blender, atau Unreal Engine butuh GPU kuat.</li>
+                        <li><strong>VRAM:</strong> Memori GPU (4GB–8GB) penting buat proyek besar. Pilih minimal 6GB VRAM buat jurusan multimedia atau teknik.</li>
+                        <li><strong>Tips:</strong> Cek kebutuhan software jurusanmu. Kalo cuma buat coding Python atau Excel, GPU terintegrasi udah cukup. Buat gaming atau rendering, cari Nvidia RTX atau AMD RX terbaru. Perhatiin juga konsumsi daya GPU biar baterai ga cepet abis!</li>
+                    </ul>
+                </article>
+
+                <!-- Sistem Operasi -->
+                <article id="sistem-operasi" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Sistem Operasi (OS)</h3>
+                    <p class="text-muted">OS adalah nyawa laptop, yang ngatur semua aplikasi dan fitur. Pilih yang sesuai sama gaya dan kebutuhan jurusanmu, bro!</p>
+                    <ul>
+                        <li><strong>Windows 11:</strong> Paling fleksibel, cocok buat semua jurusan. Support banyak software, dari Microsoft Office sampe AutoCAD. Fitur Copilot+ bikin kerja lebih cerdas dengan AI.</li>
+                        <li><strong>macOS (Sonoma/Ventura):</strong> User-friendly, stabil, dan top buat desain atau multimedia (Adobe Creative Suite jalan mulus). Cocok buat jurusan desain, film, atau musik, tapi harganya agak pricey.</li>
+                        <li><strong>ChromeOS:</strong> Ringan, murah, dan oke buat tugas online (Google Docs, Zoom). Ideal buat jurusan sastra, pendidikan, atau ekonomi, tapi terbatas buat software berat.</li>
+                        <li><strong>Linux (Ubuntu, etc.):</strong> Gratis, cocok buat informatika atau teknik yang suka ngoprek coding. Tapi butuh skill teknis lebih.</li>
+                        <li><strong>Tips:</strong> Cek kompatibilitas software jurusanmu. Misalnya, Adobe Premiere lebih oke di Windows/macOS. Kalo budget terbatas, ChromeOS atau Windows entry-level udah cukup. Jangan lupa update OS biar aman dari bug!</li>
+                    </ul>
+                </article>
+
+                <!-- Berat & Portabilitas -->
+                <article id="portabilitas" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Berat & Portabilitas</h3>
+                    <p class="text-muted">Laptop buat kuliah harus gampang dibawa-bawa, apalagi kalo lo bolak-balik kampus atau nongkrong di kafe. Berat dan desain jadi faktor penting, bro!</p>
+                    <ul>
+                        <li><strong>1–1.5 kg (Ultrabook):</strong> Super ringan, pas buat mahasiswa yang mobile, kayak jurusan hukum atau ekonomi. Contoh: MacBook Air, Asus Zenbook.</li>
+                        <li><strong>1.5–2 kg:</strong> Masih oke dibawa, cocok buat informatika atau desain yang butuh performa lebih. Contoh: Dell XPS, HP Spectre.</li>
+                        <li><strong>2 kg ke atas (Gaming/Workstation):</strong> Berat, lebih cocok di meja. Buat game dev atau teknik yang butuh GPU kenceng, kayak Acer Nitro atau Lenovo Legion.</li>
+                        <li><strong>Desain:</strong> Pilih yang tipis (di bawah 20mm) dan kokoh (material aluminium lebih tahan banting dibandingkan plastik).</li>
+                        <li><strong>Tips:</strong> Cek ukuran tasmu biar laptop muat. Kalo sering jalan, prioritaskan yang ringan dan baterai tahan lama. Perhatiin engsel layar, harus kuat biar ga gampang rusak!</li>
+                    </ul>
+                </article>
+
+                <!-- Budget & Garansi -->
+                <article id="budget" class="mb-5">
+                    <h3 class="h4 fw-semibold border-bottom pb-2 text-center">Budget & Garansi</h3>
+                    <p class="text-muted">Dompet mahasiswa kan ga tebel, jadi harus pinter-pinter pilih laptop yang worth it. Plus, garansi penting biar ga nyesel kalo ada apa-apa!</p>
+                    <ul>
+                        <li><strong>Rp6–10 juta:</strong> Dapet laptop entry-level (8GB RAM, 256GB SSD). Cocok buat ekonomi, sastra, atau hukum. Contoh: Acer Aspire, Lenovo IdeaPad.</li>
+                        <li><strong>Rp10–15 juta:</strong> Kelas menengah (16GB RAM, 512GB SSD). Oke buat informatika, desain ringan, atau manajemen. Contoh: Asus Vivobook, HP Pavilion.</li>
+                        <li><strong>Rp15–30 juta:</strong> Premium (16GB RAM, 1TB SSD, GPU diskrit). Buat desain, multimedia, teknik, atau game dev. Contoh: MacBook Pro, Dell XPS.</li>
+                        <li><strong>Garansi:</strong> Minimal 1 tahun, lebih bagus kalo ada opsi extended warranty (2–3 tahun). Cek garansi internasional kalo sering bepergian.</li>
+                        <li><strong>Tips:</strong> Bandingin harga di e-commerce (Tokopedia, Shopee) atau toko resmi. Cari promo diskon, kayak back-to-school deal. Jangan lupa cek review di Sosmed kaya YouTube biar lo yakin sama kualitasnya!</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
